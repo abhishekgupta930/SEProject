@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rain_light"
+    android:scrollbars="none"
+    tools:context=".TodayFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/curr_weather_details_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:id="@+id/current_date_time_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="April 6, 4:20 PM"
+                android:textColor="@color/rain_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/temp_high_low_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/current_date_time_text_view"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:shadowColor="@color/dark_grey"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="69°/49°"
+                android:textColor="@android:color/white" />
+
+            <RelativeLayout
+                android:id="@+id/current_temp_logo_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/temp_high_low_text_view">
+
+                <RelativeLayout
+                    android:paddingRight="60dp"
+                    android:id="@+id/curr_temp_relative_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/curr_temp_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginTop="-20dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:shadowColor="@color/dark_grey"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="3"
+                        android:text="99°"
+                        android:textColor="@android:color/white"
+                        android:textSize="120sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/curr_temp_text_view"
+                        android:shadowColor="@color/dark_grey"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="3"
+                        android:text="F"
+                        android:textColor="@android:color/white"
+                        android:textSize="60sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/curr_temp_relative_layout">
+
+                    <ImageView
+                        android:id="@+id/curr_weather_image_view"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="2dp"
+                        android:src="@drawable/weather_pouring_white" />
+
+                    <TextView
+                        android:id="@+id/curr_outlook_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/curr_weather_image_view"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="2dp"
+                        android:layout_marginRight="18dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:shadowColor="@color/dark_grey"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="3"
+                        android:text="Clear"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/feels_like_outlook_relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/current_temp_logo_relative_layout"
+                android:layout_marginTop="-8dp">
+
+                <TextView
+                    android:id="@+id/curr_feels_like_temp_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:shadowColor="@color/dark_grey"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="3"
+                    android:text="Feels like 89°"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/advisory_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/curr_weather_details_relative_layout"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="@color/dark_grey"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="3"
+            android:text="Weather Advisory"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/advisory_split_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/advisory_title_text_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/advisory_content_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/advisory_title_text_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="@color/dark_grey"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="3"
+            android:text="No advisory for Raleigh, NC"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/down_chevron_image_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/advisory_content_text_view"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/chevron_down" />
+
+        <LinearLayout
+            android:id="@+id/granular_details_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/down_chevron_image_view"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/precipitation_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High chance of precipitation (69%)"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weather Details"
+                    android:textColor="@android:color/black" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/detail_titles_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/detail_title_1_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dew Point" />
+
+                        <TextView
+                            android:id="@+id/detail_title_2_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Humidity" />
+
+                        <TextView
+                            android:id="@+id/detail_title_3_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pressure" />
+
+                        <TextView
+                            android:id="@+id/detail_title_4_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wind Speed" />
+
+                        <TextView
+                            android:id="@+id/detail_title_5_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cloud Cover" />
+
+                        <TextView
+                            android:id="@+id/detail_title_6_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UV Index" />
+
+                        <TextView
+                            android:id="@+id/detail_title_7_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Visibility" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@id/detail_titles_linear_layout"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/detail_value_1_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Value 1"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/detail_value_2_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Value 2"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/detail_value_3_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Value 3"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/detail_value_4_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Value 1"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/detail_value_5_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Value 2"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/detail_value_6_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Value 3"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/detail_value_7_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Value 3"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/dark_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Allergen Information"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:id="@+id/Allergy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/virus_outline" />
+
+                    <TextView
+                        android:id="@+id/textAllergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="80dp"
+                        android:text="@string/allergyText"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

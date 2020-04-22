@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TodayFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/suggestions_clothing"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Clothing and Apparel"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="0,1"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="130dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/clothing_suggestion_1"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/cell_shape"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/sugg_activity_library" />
+
+                    <ImageView
+                        android:id="@+id/clothing_suggestion_2"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/cell_shape"
+                        android:src="@drawable/sugg_activity_aerobics" />
+                </TableRow>
+
+
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/suggestions_food"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Food and Drinks"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="0,1"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="130dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/food_suggestion_1"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/cell_shape"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/sugg_food_burger" />
+
+                    <ImageView
+                        android:id="@+id/food_suggestion_2"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/cell_shape"
+                        android:src="@drawable/sugg_food_icecream" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="130dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/food_suggestion_3"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/cell_shape"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/sugg_food_icecream" />
+
+                    <ImageView
+                        android:id="@+id/food_suggestion_4"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/cell_shape"
+                        android:src="@drawable/sugg_food_barbecue" />
+                </TableRow>
+
+
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/suggestions_activities"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Activities"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="0,1"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="130dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/activity_suggestion_1"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/cell_shape"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/sugg_activity_aerobics" />
+
+                    <ImageView
+                        android:id="@+id/activity_suggestion_2"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/cell_shape"
+                        android:src="@drawable/sugg_activity_barbecue" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="130dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/activity_suggestion_3"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/cell_shape"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/sugg_activity_jetski" />
+
+                    <ImageView
+                        android:id="@+id/activity_suggestion_4"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/cell_shape"
+                        android:src="@drawable/sugg_activity_library" />
+                </TableRow>
+
+
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

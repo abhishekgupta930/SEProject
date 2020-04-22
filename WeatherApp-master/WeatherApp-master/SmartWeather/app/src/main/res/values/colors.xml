@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1a237e</color>
+    <color name="colorPrimaryDark">#000051</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="rain_light">#5c6bc0</color>
+    <color name="rain_dark">#283593</color>
+    <color name="rain_toolbar">#000051</color>
+
+    <color name="dark_grey">#616161</color>
+    <color name="transparent">#000000</color>
+</resources>
