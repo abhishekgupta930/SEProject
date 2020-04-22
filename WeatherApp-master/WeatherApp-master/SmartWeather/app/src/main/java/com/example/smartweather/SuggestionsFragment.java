@@ -88,7 +88,7 @@ public class SuggestionsFragment extends Fragment {
         img.setImageResource(foodItems[3]);
 
     }
-
+    //Restructuring the Code
 
     public void updateActivities(View view) {
         int temp = 2;
